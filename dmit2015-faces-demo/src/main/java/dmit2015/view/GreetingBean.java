@@ -1,5 +1,4 @@
-package view;
-
+package dmit2015.view;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Named;
 
@@ -18,11 +17,11 @@ public class GreetingBean {
     }
 
     public String getGreetingMessage() {
-
         if (firstName == null || firstName.isBlank()) {
             return "";
         }
 
-        return "Welcome " + firstName + " to DMIT2015!";
+        //return "Welcome " + firstName + " to DMIT2015!";
+        return String.format("Welcome %s to DMIT2015!", firstName);
     }
 }
